@@ -170,6 +170,10 @@
 import mongoose from "mongoose";
 
 // establish connection
+mongoose.connect("mongodb+srv://cluster0.s4lb9au.mongodb.net/labDB")
+  .then(() => console.log("✅ Connected to MongoDB Atlas"))
+  .catch(err => console.error("❌ Connection error:", err));
+
 
 
 // define schema
