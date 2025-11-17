@@ -170,7 +170,7 @@
 import mongoose from "mongoose";
 
 // establish connection
-mongoose.connect("mongodb+srv://cluster0.s4lb9au.mongodb.net/labDB")
+mongoose.connect("mongodb+srv://s202172030_db_user:AdG9f36cOhWKquha@cluster0.s4lb9au.mongodb.net/labDB?retryWrites=true&w=majority")
   .then(() => console.log("✅ Connected to MongoDB Atlas"))
   .catch(err => console.error("❌ Connection error:", err));
 
@@ -213,6 +213,11 @@ async function updateStudent() {
 
 
 // delete document
+async function deleteStudent() {
+         await Student.deleteOne({ name: "Sara" });
+      console.log("✅ Deleted Sara");
+      }
+   deleteStudent();
 
 
 
