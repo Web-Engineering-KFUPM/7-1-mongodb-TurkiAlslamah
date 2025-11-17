@@ -177,6 +177,12 @@ mongoose.connect("mongodb+srv://cluster0.s4lb9au.mongodb.net/labDB")
 
 
 // define schema
+const studentSchema = new mongoose.Schema({
+         name: String,
+         age: Number,
+         major: String
+      });
+const Student = mongoose.model("Student", studentSchema);
 
 
 // create document
